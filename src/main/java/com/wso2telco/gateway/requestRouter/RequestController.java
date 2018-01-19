@@ -5,6 +5,7 @@ import com.jayway.jsonpath.JsonPath;
 import com.wso2telco.gateway.requestRouter.model.HeaderModel;
 import com.wso2telco.gateway.requestRouter.model.HeaderModes;
 import com.wso2telco.gateway.requestRouter.model.ReplaceBodyModel;
+import com.wso2telco.gateway.requestRouter.util.UrlHelper;
 import org.apache.commons.lang.StringEscapeUtils;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -245,7 +246,9 @@ public class RequestController {
 
         try {
             original = original.replace(callbackURL, "");
-            original = original.substring(original.indexOf("org=") + 5, original.length());
+
+            URL url = new URL(original);
+            original = UrlHelper.getInstance().splitQuery(url, "org");
 
             original = URLDecoder.decode(original);
 
