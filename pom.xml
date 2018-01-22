@@ -3,7 +3,7 @@
     <groupId>com.wso2telco.gateway</groupId>
     <artifactId>request-router-parent</artifactId>
     <packaging>pom</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>request-router-parent</name>
 
     <modules>
@@ -28,7 +28,7 @@
         <url>https://github.com/manojlh/request-router.git</url>
         <developerConnection>scm:git:https://github.com/manojlh/request-router.git</developerConnection>
         <connection>scm:git:https://github.com/manojlh/request-router.git</connection>
-        <tag>v1.0.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
